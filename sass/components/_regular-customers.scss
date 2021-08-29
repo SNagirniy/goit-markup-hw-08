@@ -1,0 +1,44 @@
+/*===regular-customers===*/
+.regular-customers__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.regular-customers__item {
+  margin: 15px;
+  flex-basis: calc((100% - 15px * 4) / 2);
+}
+
+.regular-customers__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92px;
+
+  border: solid 1px $logo-fill;
+  border-radius: 4px;
+
+  transition: border $transParam;
+
+  &:hover,
+  &:focus {
+    border: solid 1px $accent;
+  }
+}
+
+/*===Лого клієнтів===*/
+.regular-customers__logo {
+  width: 106px;
+  height: 60px;
+
+  fill: $logo-fill;
+  box-sizing: border-box;
+
+  transition: fill $transParam;
+
+  .regular-customers__link:hover &,
+  .regular-customers__link:focus & {
+    fill: $accent;
+  }
+}

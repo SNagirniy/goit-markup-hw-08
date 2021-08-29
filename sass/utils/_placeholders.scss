@@ -1,0 +1,28 @@
+/*====BUTTON====*/
+%mainButton {
+  padding: 10px 32px;
+
+  color: $text-white;
+  background-color: $accent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  border-color: transparent;
+  border-radius: 4px;
+  box-shadow: $heroBtm-shadow;
+  cursor: pointer;
+
+  transition: bacground-color $transParam;
+
+  &:hover,
+  &:focus {
+    background-color: $footerBtnBG;
+    box-sizing: border-box;
+    box-shadow: $heroBtm-shadow;
+
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,134 @@
+/*Portfolio*/
+
+/*Фільтр*/
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/*конпки фільтра*/
+.filter__button {
+  padding: 6px 22px;
+
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  border: none;
+  border-radius: 4px;
+  color: $secondary;
+  background-color: $secondary-bgc;
+  cursor: pointer;
+
+  transition: color $transParam, background-color $transParam,
+    box-shadow $transParam;
+
+  &:hover,
+  &:focus {
+    color: $text-white;
+    background-color: $accent;
+    box-shadow: $filterBtn-shadow;
+    border-radius: 4px;
+  }
+}
+
+.filter__button--curent {
+  color: $text-white;
+  background-color: $accent;
+}
+
+/*Проекти*/
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+/*карточки*/
+.project__item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 30px * 3) / 3);
+
+  background-color: var(--primary-bgc);
+}
+
+.project__link {
+  display: block;
+  height: 100%;
+  font-family: Roboto;
+  text-decoration: none;
+
+  transition: box-shadow $transParam;
+
+  &:hover,
+  &:focus {
+    display: block;
+    box-shadow: $projectCard-shadow;
+  }
+}
+
+/*заголовки карток - згруповані*/
+.project__description {
+  padding: 20px 24px;
+  border: solid 1px $project-border;
+  border-top: none;
+}
+
+/*заголовки карток*/
+.project__title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: $secondary;
+}
+.project__type {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: $primary-text;
+}
+
+/*Оверлей*/
+
+.project__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+
+  color: $text-white;
+  background: $overlay;
+
+  transform: translateY(calc(100% + 1px));
+  transition: transform $transParam;
+
+  .project__link:hover &,
+  .project__link:focus & {
+    transform: translateY(0);
+  }
+}

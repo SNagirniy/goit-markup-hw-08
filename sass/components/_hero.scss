@@ -1,0 +1,50 @@
+/*===Hero===*/
+.section.hero {
+  background-color: $footer-bcg;
+  text-align: center;
+  margin: 0 auto;
+  width: inherit;
+  max-height: 400px;
+
+  @media (min-device-pixel-ratio: 1),
+    (min-resolution: 96dpi),
+    (min-resolution: 1dppx) {
+    background-image: linear-gradient(to right, $gradient, $gradient),
+      url(../images/hero_mobile.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, $gradient, $gradient),
+      url(../images/hero_mobile2x.jpg);
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*основний заголовок*/
+.hero__title {
+  margin: 0 auto;
+  max-width: 360px;
+  margin-bottom: 30px;
+
+  color: $text-white;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media (min-width: 1200px) {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+/*кнопка "замовити послугу"*/
+.button {
+  @extend %mainButton;
+}

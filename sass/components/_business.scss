@@ -1,0 +1,39 @@
+/*контент секції 3*/
+.business {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.business__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.business__item {
+  position: relative;
+
+  margin-left: 30px;
+  flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+.business__title {
+  position: absolute;
+  bottom: 0px;
+
+  width: 100%;
+  padding: 27px 0px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $text-white;
+  background: $businessOverlay;
+}

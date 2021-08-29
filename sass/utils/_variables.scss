@@ -1,0 +1,40 @@
+/*==========FONTS============*/
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Raleway", sans-serif;
+
+/*==========COLORS===========*/
+$primary-text: #757575;
+$secondary: #212121;
+$text-white: #ffffff;
+$accent: #2196f3;
+$primary-bgc: #ffffff;
+$secondary-bgc: #f5f4fa;
+$footer-bcg: #2f303a;
+$header-line: #ececec;
+$logo-black: #000000;
+$gradient: rgba(47, 48, 58, 0.4);
+$logo-fill: #afb1b8;
+$footer-contact: rgba(255, 255, 255, 0.6);
+$footer-social-bg: rgba(255, 255, 255, 0.1);
+$backdrop: rgba(0, 0, 0, 0.2);
+$input-field: rgba(33, 33, 33, 0.2);
+$placeholder: rgba(165, 151, 151, 0.5);
+$overlay: rgba(33, 150, 243, 0.9);
+$project-border: #eeeeee;
+$closeBtn-border: rgba(0, 0, 0, 0.1);
+$businessOverlay: rgba(47, 48, 58, 0.8);
+$emailBorder: rgba(255, 255, 255, 0.3);
+$footerBtnBG: #188ce8;
+
+/*===TRANSITION PARAMETERS===*/
+$transParam: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+/*==========SHADOWS===========*/
+$heroBtm-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$footerMail-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+$teamCard-modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+$filterBtn-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+  0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+$projectCard-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);

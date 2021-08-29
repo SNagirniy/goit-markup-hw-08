@@ -1,0 +1,129 @@
+/*footer*/
+.footer {
+  background: $footer-bcg;
+  padding: 60px 0;
+}
+
+/*адреса*/
+.footer__location {
+  font-style: normal;
+  line-height: 1.71;
+
+  color: $text-white;
+
+  margin-bottom: 9px;
+}
+
+/*контактні дані*/
+.footer__contact {
+  font-style: normal;
+  line-height: 1.71;
+  text-decoration: none;
+
+  color: $footer-contact;
+
+  transition: color $transParam;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+.footer__item:first-child {
+  margin-bottom: 9px;
+}
+
+/*footer social list*/
+
+.footer__display {
+  text-align: center;
+  /*display: flex;
+  align-items: baseline;*/
+}
+
+.footer-social-container {
+  margin-top: 60px;
+}
+.footer-subtitle {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primary-bgc;
+}
+/*===СОЦІАЛЬНІ МЕРЕЖІ===*/
+.footer-social {
+  @extend .social-networks;
+}
+
+.footer-social__item {
+  @extend .social-networks__item;
+}
+
+.footer-social__link {
+  @extend .social-networks__link;
+  background-color: $footer-social-bg;
+}
+
+.footer-social__icon {
+  @extend .social-networks__icon;
+  fill: $text-white;
+}
+
+/*footer form*/
+
+.subscription {
+  margin-top: 60px;
+}
+.subscription__form {
+  /*display: flex;*/
+}
+.subscription__email {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $footer-contact;
+
+  border: 1px solid $emailBorder;
+  box-sizing: border-box;
+  filter: $footerMail-shadow;
+  border-radius: 4px;
+  background: transparent;
+
+  transition: border-color $transParam;
+
+  &:focus-within {
+    outline: none;
+    border-color: $accent;
+  }
+}
+
+.subscription__button {
+  @extend %mainButton;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 28px;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-left: 12px;*/
+}
+
+.subscription__icon {
+  fill: $primary-bgc;
+  margin-left: 10px;
+}

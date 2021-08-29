@@ -1,0 +1,84 @@
+body {
+  font-family: $primary-font;
+  background-color: $primary-bgc;
+  color: $primary-text;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+/*обнулюяю відступи окремих елементів**/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/*задаю значення та спосіб відображення всіх елементів img*/
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*Прибирає маркери списку*/
+ul {
+  list-style: none;
+}
+
+/*параметри контейнера*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+/*параметри секій*/
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+/*Заголовки секцій*/
+.section-title {
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $secondary;
+}
+
+/*приховує заголовок секції*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
