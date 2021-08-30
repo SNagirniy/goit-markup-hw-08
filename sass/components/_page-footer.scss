@@ -4,6 +4,14 @@
   padding: 60px 0;
 }
 
+.footer__box {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+}
+
 /*адреса*/
 .footer__location {
   font-style: normal;
@@ -43,7 +51,12 @@
 }
 
 .footer-social-container {
-  margin-top: 60px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 767px) {
+    margin-left: 165px;
+  }
 }
 .footer-subtitle {
   margin-bottom: 20px;
@@ -79,6 +92,11 @@
 
 .subscription {
   margin-top: 60px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .subscription__form {
   /*display: flex;*/
@@ -86,8 +104,8 @@
 .subscription__email {
   display: flex;
   align-items: center;
-  width: 100%;
   height: 50px;
+  width: 100%;
   padding-left: 16px;
 
   font-size: 16px;
@@ -102,6 +120,10 @@
   background: transparent;
 
   transition: border-color $transParam;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
 
   &:focus-within {
     outline: none;

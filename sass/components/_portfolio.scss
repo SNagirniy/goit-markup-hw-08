@@ -1,16 +1,17 @@
 /*Portfolio*/
 
 /*Фільтр*/
-.portfolio.section {
-  @media screen and (max-width: 1199px) {
-    padding: 60px 0;
-  }
-}
 
 .filter {
   display: flex;
   margin-bottom: 40px;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
 .filter__item:not(:last-child) {
@@ -18,7 +19,9 @@
 }
 
 .filter__item:not(:nth-child(n + 4)) {
-  margin-bottom: 15px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 /*конпки фільтра*/
@@ -57,30 +60,36 @@
 
 /*Проекти*/
 .project {
-  /*display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;*/
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 /*карточки*/
 .project__item {
-  /*margin-left: 30px;
-  margin-top: 30px;
-  flex-basis: calc((100% - 30px * 3) / 3);*/
-
   background-color: var(--primary-bgc);
 
-  &:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+    flex-basis: calc((100% - 15px * 4) / 2);
+    object-fit: none;
+  }
+}
+
+.project__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
 }
 
 .project__link {
-  display: block;
+  display: flex;
   height: 100%;
   font-family: Roboto;
   text-decoration: none;
+  flex-direction: column;
 
   transition: box-shadow $transParam;
 
@@ -93,6 +102,9 @@
 
 /*заголовки карток - згруповані*/
 .project__description {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: 20px 24px;
   border: solid 1px $project-border;
   border-top: none;
@@ -121,6 +133,8 @@
 .project__thumb {
   position: relative;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+  }
 }
 
 .overlay {

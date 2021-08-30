@@ -4,24 +4,27 @@
 }
 
 .team__list {
-  /*display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;*/
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 /*карточки "команда"*/
 .team__item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
-
-  /*
-  margin-left: 30px;
-  flex-basis: calc((100% - 30px * 4) / 4);*/
-
   background: $primary-bgc;
   box-shadow: $teamCard-modal-shadow;
   border-radius: 0px 0px 4px 4px;
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+    flex-basis: calc((100% - (4 * 15px)) / 2);
+  }
+}
+.team__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
 }
 
 /*заголовки карток*/

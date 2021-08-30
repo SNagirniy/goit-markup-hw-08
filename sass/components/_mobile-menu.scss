@@ -63,33 +63,17 @@
 }
 
 .mobile-menu__link {
-  position: relative;
-
   font-style: Medium;
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 2%;
   color: $secondary;
+  transition: color $transParam;
 
   &:hover,
   &:focus {
     color: $accent;
-
-    &::after {
-      position: absolute;
-
-      display: block;
-
-      content: "";
-      width: 100%;
-      height: 4px;
-
-      background-color: $accent;
-      border-radius: 2px;
-    }
   }
-
-  transition: color $transParam;
 }
 
 .mobile-menu__item {
@@ -113,16 +97,18 @@
 
 .mobile-socials {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 64px;
 }
 
 .mobile-socials__item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid $input-field;
 }
 
 .mobile-socials__link {
   font-size: 18px;
   line-height: 1.22;
-  letter-spacing: 2%;
   color: $accent;
 }

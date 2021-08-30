@@ -33,8 +33,8 @@
                         </li>
                     
                     </ul>
-                    </nav>
-                    <ul class="header-contact">
+            </nav>
+             <ul class="header-contact">
                         <li class="header-contact__item">
                             <a href="mailto:info@devstudio.com" class="header-contact__link">
                                 <svg class="header-contact__icon" style="width: 16px; height: 12px;">
@@ -48,7 +48,7 @@
                                     <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                                 </svg>
                                 +38 096 111 11 11</a></li>
-                    </ul>
+             </ul>
                               
         </div>
     </header>
@@ -131,10 +131,15 @@
                 <h2 class="section-title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img src="./images/igor.jpg"
-                        srcset="./images/igor.jpg 1x,
-                                ./images/igor2x.jpg 2x"
-                        alt="smiling man in glases" >
+                    <picture>
+                        <source srcset="./images/igor.jpg 1x, ./images/igor2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
+                            type="image/jpg" />
+                        <source srcset="./images/igor_tablet.jpg 1x, ./images/igor_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
+                            type="image/jpg" />
+                        <source srcset="./images/igor_desk.jpg 1x, ./images/igor_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
+                            type="image/jpg" />
+                        <img src="./images/igor_desk.jpg" alt="smiling man in glases" />
+                    </picture>
                         <div class="team__discription">
                             <h3 class="team__name">Игорь Демьяненко</h3>
                             <p class="team__position">Product Designer</p>
@@ -171,10 +176,16 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__item"><img src="./images/olia.jpg" 
-                        srcset="./images/olia.jpg 1x,
-                                ./images/olia2x.jpg 2x" 
-                        alt="smiling woman with glasses">
+                    <li class="team__item">
+                        <picture>
+                            <source srcset="./images/olia.jpg 1x, ./images/olia2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
+                                type="image/jpg" />
+                            <source srcset="./images/olia_tablet.jpg 1x, ./images/olia_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
+                                type="image/jpg" />
+                            <source srcset="./images/olia_desk.jpg 1x, ./images/olia_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
+                                type="image/jpg" />
+                            <img src="./images/olia_desk.jpg" alt="smiling woman with glasses" />
+                        </picture>
                         <div class="team__discription">
                             <h3 class="team__name">Ольга Репина</h3>
                             <p class="team__position">Frontend Developer</p>
@@ -210,10 +221,16 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__item"><img src="./images/kolia.jpg" 
-                        srcset="./images/kolia.jpg 1x,
-                                ./images/kolia2x.jpg 2x"
-                         alt="smiling man">
+                    <li class="team__item">
+                        <picture>
+                            <source srcset="./images/kolia.jpg 1x, ./images/kolia2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
+                                type="image/jpg" />
+                            <source srcset="./images/kolia_tablet.jpg 1x, ./images/kolia_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
+                                type="image/jpg" />
+                            <source srcset="./images/kolia_desk.jpg 1x, ./images/kolia_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
+                                type="image/jpg" />
+                            <img src="./images/kolia_desk.jpg" alt="smiling man" />
+                        </picture>
                         <div class="team__discription">
                             <h3 class="team__name">Николай Тарасов</h3>
                             <p class="team__position">Marketing</p>
@@ -250,10 +267,15 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/misha.jpg" 
-                        srcset="./images/misha.jpg 1x,
-                                ./images/misha2x.jpg 2x" 
-                        alt="man in glases">
+                        <picture>
+                            <source srcset="./images/misha.jpg 1x, ./images/misha2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
+                                type="image/jpg" />
+                            <source srcset="./images/misha_tablet.jpg 1x, ./images/misha_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
+                                type="image/jpg" />
+                            <source srcset="./images/misha_desk.jpg 1x, ./images/misha_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
+                                type="image/jpg" />
+                            <img src="./images/misha_desk.jpg" alt="man in glases" />
+                        </picture>
                         <div class="team__discription">
                             <h3 class="team__name">Михаил Ермаков</h3>
                             <p class="team__position">UI Designer</p>
@@ -352,6 +374,7 @@
     <!--контакты-->
     <footer class="footer">
         <div class="footer__display container">
+            <div class="footer__box">
             <div>
             <a href="./index.html" class="logo logo--footer">Web<span class="footer__logo-half">Studio</span></a>
             <address>
@@ -398,6 +421,7 @@
                         </a>
                     </li>
                 </ul>
+            </div>
             </div>
             <div class="subscription">
                 <h3 class="footer-subtitle">Подпишитесь на рассылку</h3>
