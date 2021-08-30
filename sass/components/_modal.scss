@@ -6,6 +6,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 500;
 
   background: $backdrop;
 
@@ -25,11 +26,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 75%;
+  width: 95%;
+  overflow: scroll;
 
-  min-height: 581px;
-  min-width: 528px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+
   background: $primary-bgc;
-
   box-shadow: $teamCard-modal-shadow;
   border-radius: 4px;
 
@@ -85,9 +91,10 @@
   margin-bottom: 12px;
   font-size: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   align-items: center;
-  vertical-align: Top;
+  text-align: center;
+
   letter-spacing: 0.03em;
   color: $secondary;
 }
@@ -105,7 +112,7 @@
 
 /*===Параметри поля вводу===*/
 .input__field {
-  width: 448px;
+  width: 100%;
   height: 40px;
   box-sizing: border-box;
   padding: 12px 12px 12px 42px;
@@ -164,7 +171,7 @@
   box-sizing: content-box;
   position: relative;
   resize: none;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   margin-top: 4px;
@@ -198,19 +205,22 @@
 /*===Чекбокс===*/
 .check-box {
   display: flex;
-  justify-content: baseline;
+  justify-content: space-between;
   align-items: baseline;
   margin-top: 20px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .check-box__label {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
+  width: 100%;
+  position: relative;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: $primary-text;
@@ -220,7 +230,9 @@
 .check-box__marck {
   width: 16px;
   height: 15px;
-  margin-right: 7px;
+  position: absolute;
+  left: -100%;
+
   appearance: none;
 }
 
@@ -247,14 +259,14 @@
 
 /*==Текст чекбоксу==*/
 .check-box__text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: $primary-text;
 }
 .check-box__link {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: $accent;
 }

@@ -94,6 +94,10 @@ ul {
   overflow: hidden;
 }
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 /*====BUTTON====*/
 .button, .subscription__button, .main-form__btn {
   padding: 10px 32px;
@@ -723,6 +727,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 500;
   background: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -741,8 +746,9 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-height: 581px;
-  min-width: 528px;
+  height: 75%;
+  width: 95%;
+  overflow: scroll;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -753,6 +759,13 @@ ul {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -808,11 +821,11 @@ ul {
   margin-bottom: 12px;
   font-size: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  vertical-align: Top;
+  text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
@@ -835,7 +848,7 @@ ul {
 
 /*===Параметри поля вводу===*/
 .input__field {
-  width: 448px;
+  width: 100%;
   height: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -904,7 +917,7 @@ ul {
           box-sizing: content-box;
   position: relative;
   resize: none;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   margin-top: 4px;
@@ -959,14 +972,15 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
   margin-top: 20px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .check-box__label {
@@ -979,9 +993,11 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
+  width: 100%;
+  position: relative;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
@@ -991,7 +1007,8 @@ ul {
 .check-box__marck {
   width: 16px;
   height: 15px;
-  margin-right: 7px;
+  position: absolute;
+  left: -100%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1020,15 +1037,15 @@ ul {
 
 /*==Текст чекбоксу==*/
 .check-box__text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
 }
 
 .check-box__link {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #2196f3;
 }
@@ -1053,18 +1070,27 @@ ul {
 
 /*Portfolio*/
 /*Фільтр*/
+@media screen and (max-width: 1199px) {
+  .portfolio.section {
+    padding: 60px 0;
+  }
+}
+
 .filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filter__item:not(:nth-child(n + 4)) {
+  margin-bottom: 15px;
 }
 
 /*конпки фільтра*/
@@ -1102,22 +1128,22 @@ ul {
 
 /*Проекти*/
 .project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  /*display: flex;
+  flex-wrap: wrap;
   margin-left: -30px;
-  margin-top: -30px;
+  margin-top: -30px;*/
 }
 
 /*карточки*/
 .project__item {
-  margin-left: 30px;
+  /*margin-left: 30px;
   margin-top: 30px;
-  -ms-flex-preferred-size: calc((100% - 30px * 3) / 3);
-      flex-basis: calc((100% - 30px * 3) / 3);
+  flex-basis: calc((100% - 30px * 3) / 3);*/
   background-color: var(--primary-bgc);
+}
+
+.project__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .project__link {
@@ -1252,7 +1278,8 @@ ul {
   height: 100vh;
   padding: 48px 40px;
   background-color: #ffffff;
-  z-index: 200;
+  z-index: 999;
+  overflow: scroll;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -1297,7 +1324,7 @@ ul {
   border-radius: 2px;
 }
 
-.mobile-menu__item:not(:last-child) {
+.mobile-menu__item {
   margin-bottom: 32px;
 }
 
