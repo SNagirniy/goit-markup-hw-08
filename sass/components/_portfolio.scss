@@ -99,6 +99,8 @@
   text-decoration: none;
   flex-direction: column;
 
+  border-bottom: solid 1px $project-border;
+
   transition: box-shadow $transParam;
 
   &:hover,
@@ -114,8 +116,8 @@
   flex-direction: column;
   flex-grow: 1;
   padding: 20px 24px;
-  border: solid 1px $project-border;
-  border-top: none;
+  border-right: solid 1px $project-border;
+  border-left: solid 1px $project-border;
 }
 
 /*заголовки карток*/

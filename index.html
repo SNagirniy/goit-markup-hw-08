@@ -116,20 +116,20 @@
                     <li class="business__item">
                         <img 
                         src="./images/box-1.jpg" 
-                        srcset="./images/box-1.jpg, ./images/box-1-2x.jpg"
+                        srcset="./images/box-1-2x.jpg"
                         alt="man writing a code">
                         <h3 class="business__title">Десктопные приложения</h3>    
                     </li>
                     <li class="business__item">
                         <img 
-                        srcset="./images/box-2.jpg, ./images/box-2-2x.jpg"
+                        srcset="./images/box-2-2x.jpg"
                         src="./images/box-2.jpg" 
                         alt="man with smartphone in his hand near laptop">
                         <h3 class="business__title">Мобильные приложения</h3>
                     </li>
                     <li class="business__item">
                         <img 
-                        srcset="./images/box-3.jpg, ./images/box-3-2x.jpg"
+                        srcset="./images/box-3-2x.jpg"
                         src="./images/box-3.jpg" 
                         alt="man with tablet">
                         <h3 class="business__title">Дизайнерские решения</h3>
@@ -144,12 +144,13 @@
                 <ul class="team__list">
                     <li class="team__item">
                     <picture>
-                        <source srcset="./images/igor.jpg 1x, ./images/igor2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
+                        <source srcset="./images/igor_desk.jpg 1x, ./images/igor_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
                             type="image/jpg" />
                         <source srcset="./images/igor_tablet.jpg 1x, ./images/igor_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
                             type="image/jpg" />
-                        <source srcset="./images/igor_desk.jpg 1x, ./images/igor_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
+                        <source srcset="./images/igor.jpg 1x, ./images/igor2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
                             type="image/jpg" />
+                        
                         <img src="./images/igor_desk.jpg" alt="smiling man in glases" />
                     </picture>
                         <div class="team__discription">
@@ -190,12 +191,13 @@
                     </li>
                     <li class="team__item">
                         <picture>
-                            <source srcset="./images/olia.jpg 1x, ./images/olia2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
+                            <source srcset="./images/olia_desk.jpg 1x, ./images/olia_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
                                 type="image/jpg" />
                             <source srcset="./images/olia_tablet.jpg 1x, ./images/olia_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
                                 type="image/jpg" />
-                            <source srcset="./images/olia_desk.jpg 1x, ./images/olia_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
+                            <source srcset="./images/olia.jpg 1x, ./images/olia2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
                                 type="image/jpg" />
+                            
                             <img src="./images/olia_desk.jpg" alt="smiling woman with glasses" />
                         </picture>
                         <div class="team__discription">
@@ -235,12 +237,13 @@
                     </li>
                     <li class="team__item">
                         <picture>
-                            <source srcset="./images/kolia.jpg 1x, ./images/kolia2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
+                            <source srcset="./images/kolia_desk.jpg 1x, ./images/kolia_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
                                 type="image/jpg" />
                             <source srcset="./images/kolia_tablet.jpg 1x, ./images/kolia_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
                                 type="image/jpg" />
-                            <source srcset="./images/kolia_desk.jpg 1x, ./images/kolia_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
+                            <source srcset="./images/kolia.jpg 1x, ./images/kolia2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
                                 type="image/jpg" />
+                            
                             <img src="./images/kolia_desk.jpg" alt="smiling man" />
                         </picture>
                         <div class="team__discription">
@@ -280,12 +283,13 @@
                     </li>
                     <li class="team__item">
                         <picture>
-                            <source srcset="./images/misha.jpg 1x, ./images/misha2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
-                                type="image/jpg" />
-                            <source srcset="./images/misha_tablet.jpg 1x, ./images/misha_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
-                                type="image/jpg" />
                             <source srcset="./images/misha_desk.jpg 1x, ./images/misha_desk2x.jpg 2x" media="(min-width: 1200px)" sizes="25vw"
                                 type="image/jpg" />
+                            <source srcset="./images/misha_tablet.jpg 1x, ./images/misha_tablet2x.jpg 2x" media="(min-width: 768px)" sizes="50vw"
+                                    type="image/jpg" />
+                            <source srcset="./images/misha.jpg 1x, ./images/misha2x.jpg 2x" media="(max-width: 767px)" sizes="100vw"
+                                type="image/jpg" />
+                            
                             <img src="./images/misha_desk.jpg" alt="man in glases" />
                         </picture>
                         <div class="team__discription">
@@ -511,7 +515,7 @@
         </button>
         
             <ul class="mobile-menu">
-                <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link current">Студия</a></li>
+                <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Студия</a></li>
                 <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link">Портфолио</a></li>
                 <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Контакты</a></li>
             </ul>

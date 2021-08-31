@@ -63,10 +63,8 @@
 }
 
 .mobile-menu__link {
-  font-style: Medium;
   font-size: 40px;
   line-height: 1.18;
-  letter-spacing: 2%;
   color: $secondary;
   transition: color $transParam;
 
@@ -74,6 +72,14 @@
   &:focus {
     color: $accent;
   }
+
+  @media screen and (max-width: 479px) {
+    font-size: calc(26px + 14 * (100vw / 560));
+  }
+}
+
+.mobile-menu__link--current {
+  color: $accent;
 }
 
 .mobile-menu__item {
@@ -88,11 +94,19 @@
   font-size: 24px;
   line-height: 1.17;
   color: $primary-text;
+
+  @media screen and (max-width: 479px) {
+    font-size: calc(14px + 10 * (100vw / 560));
+  }
 }
 
 .mobile-contacts__link--color {
   color: $accent;
   font-size: 34px;
+
+  @media screen and (max-width: 479px) {
+    font-size: calc(20px + 14 * (100vw / 560));
+  }
 }
 
 .mobile-socials {
@@ -104,6 +118,7 @@
 .mobile-socials__item:not(:last-child) {
   margin-right: 10px;
   padding-right: 10px;
+  margin-bottom: 10px;
   border-right: 1px solid $input-field;
 }
 
@@ -111,4 +126,8 @@
   font-size: 18px;
   line-height: 1.22;
   color: $accent;
+
+  @media screen and (max-width: 479px) {
+    font-size: calc(10px + 8 * (100vw / 560));
+  }
 }
