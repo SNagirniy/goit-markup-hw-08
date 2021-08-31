@@ -37,12 +37,15 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
 
+  /*мобільний*/
   @media screen and (min-width: 480px) and (max-width: 767px) {
     width: 480px;
   }
+  /*планшет*/
   @media screen and (min-width: 768px) {
     width: 768px;
   }
+  /*десктоп*/
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
@@ -52,6 +55,12 @@ ul {
 .section {
   padding-bottom: 60px;
   padding-top: 60px;
+
+  /*Параметри для десктопу*/
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 /*Заголовки секцій*/
@@ -67,6 +76,7 @@ ul {
 
   color: $secondary;
 
+  /*Шрифт для десктопу*/
   @media screen and (min-width: 1200px) {
     font-size: 33px;
   }

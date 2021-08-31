@@ -1,10 +1,12 @@
 /*перелаштовує на flex елементи всередині header*/
 .header__container {
+  /*параметри контейнера для мобільниих*/
   @media (max-width: 767px) {
     padding: 16px 15px;
     position: relative;
   }
 
+  /*параметри контейнера для планшетів*/
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
@@ -19,9 +21,6 @@
 
   @media (max-width: 767px) {
     justify-content: space-between;
-  }
-
-  @media (min-width: 768px) {
   }
 }
 
@@ -78,6 +77,7 @@
 /*Контакти*/
 
 .header-contact {
+  /*приховує десктоп контакти*/
   @media (max-width: 767px) {
     display: none;
   }
@@ -103,6 +103,11 @@
   &:hover,
   &:focus {
     color: $accent;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
